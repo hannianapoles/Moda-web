@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Proyecto Moda</title>
+
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="../librerias/css/bootstrap.min.css">
+
+    <style>
+        /* Ajusta el espacio superior del body para evitar que la navbar lo cubra */
+        
+        body {
+            padding-top: 60px;
+            /* Altura de la navbar fija */
+        }
+        /* Estilo para las imágenes circulares */
+        
+        .circular-img {
+            border-radius: 50%;
+            /* Hace las imágenes circulares */
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            /* Ajusta la imagen para cubrir el área */
+        }
+        /* Ajuste de altura para el slider */
+        
+        .carousel-item img {
+            height: 400px;
+            /* Ajusta la altura del slider según sea necesario */
+            object-fit: cover;
+            /* Asegura que la imagen cubra el área del contenedor */
+        }
+        /* Estilo para el encabezado sobrepuesto */
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fondo oscuro semitransparente */
+            position: relative;
+            /* Posición relativa para mover el encabezado */
+            top: -400px;
+            /* Ajuste para superponer sobre el slider */
+            z-index: 10;
+            /* Asegura que el encabezado esté sobre el slider */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar fija en la parte superior -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Moda Trend</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slider de imágenes -->
+    <div id="mainSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/banner moda.jpg" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/banner2.webp" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/banner 3.jpeg" class="d-block w-100" alt="Imagen 3">
+            </div>
+        </div>
+
+        <!-- Controles del slider -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- Encabezado con el título principal -->
+    <header class="text-white text-center py-5">
+        <div class="container">
+            <h1>MODA TREND</h1>
+        </div>
+    </header>
+
+    <!-- Sección de contenido principal -->
+    <section id="home" class="container py-5">
+        <h2>MODA ACTUAL</h2>
+        <div class="row">
+            <!-- Tarjetas con imágenes y descripciones de productos -->
+            <div class="col-md-4">
+                <img src="../img/moto muestra1.webp" alt="Moto 1" class="img-fluid">
+                <h3>Moto 1</h3>
+                <p>Descripción de la moto 1.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="../img/moto muestra2.webp" alt="Moto 2" class="img-fluid">
+                <h3>Moto 2</h3>
+                <p>Descripción de la moto 2.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="../img/moto muestra3.webp" alt="Moto 3" class="img-fluid">
+                <h3>Moto 3</h3>
+                <p>Descripción de la moto 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de venta de productos -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4">PRODUCTOS EN VENTA</h2>
+        <div class="row text-center">
+            <!-- Tarjetas con imágenes circulares y descripciones de productos -->
+            <div class="col-md-4 mb-4">
+                <img src="../img/pieza motor.webp" alt="Pieza 1" class="circular-img img-fluid">
+                <h3>Pieza 1</h3>
+                <p>Descripción de la pieza 1.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="../img/pieza her.jpg" alt="Pieza 2" class="circular-img img-fluid">
+                <h3>Pieza 2</h3>
+                <p>Descripción de la pieza 2.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="../img/pieza llanta.jpg" alt="Pieza 3" class="circular-img img-fluid">
+                <h3>Pieza 3</h3>
+                <p>Descripción de la pieza 3.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="../img/pieza nose.jpeg" alt="Pieza 4" class="circular-img img-fluid">
+                <h3>Pieza 4</h3>
+                <p>Descripción de la pieza 4.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="../img/pieza trtaje.jpeg" alt="Pieza 5" class="circular-img img-fluid">
+                <h3>Pieza 5</h3>
+                <p>Descripción de la pieza 5.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="../img/pieza 4.jpg" alt="Pieza 6" class="circular-img img-fluid">
+                <h3>Pieza 6</h3>
+                <p>Descripción de la pieza 6.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script de Bootstrap -->
+    <script src="../librerias/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
